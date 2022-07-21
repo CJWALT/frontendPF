@@ -424,7 +424,7 @@ footer #wrapper .contact_forms input[type = button]:hover{
    font-weight:var(--bold-font-weight);
 }
 .show_scroll{ 
-    bottom:3rem;
+    bottom:7em;
 }
 
 

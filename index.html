@@ -159,23 +159,19 @@
                     </ul>
                 </div>
                 <div class="contact_forms">
-                    <form action="#">
+                    <form action= "https://formsubmit.co/bf59a9499e8750b1a29fbee9b7cd4f1b" method="POST">
                         <div class="form_group">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="Name" placeholder ="Name:" id="name" required> 
                         </div>
                         <div class="form_group">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="emailAddress">
+                            <input type="email" name="Email" id="emailAddress" placeholder="Email:" required>
                         </div>
                         <div class="form_group">
-                            <label for="message">Message:</label>
-                            <textarea name="message" id="message" cols="20" rows="5">
-
+                            <textarea name="Message" id="message" cols="20" placeholder = "message:" rows="5" required>
                             </textarea>
                         </div>
                         <div class="form_group">
-                            <label for="priority">Priority:</label>
+                            
                             <select name="priority" id="priority">
                                 <option value="minor">Minor</option>
                                 <option value="major">Major</option>
@@ -226,7 +222,9 @@
         });
         tl.to(".about_title",{ 
             opacity:1,
-        }); 
+        });
+        
+       
         aboutParas.forEach((div, i ) =>{
     
         let p = gsap.utils.toArray("p", div); 
@@ -239,7 +237,6 @@
 
     });
 
-
         tl.from(".education_num", {
             opacity:0, 
 
@@ -248,7 +245,26 @@
         tl.to(".education_num", { 
             opacity:1, 
         });
-        
+
+
+        aboutParas.forEach((div, i ) =>{
+            
+            let h3 = gsap.utils.toArray("h3", div);
+
+                    tl.from("h3", { 
+                        opacity:0,
+                        // scrub:0,
+
+                    });
+
+                    tl.to("h3", { 
+                        opacity:1,
+                        
+                        end:"+=2",
+                        
+                    });
+
+                });        
     </script>
    
 <script src="assets/js/main.js"></script>
